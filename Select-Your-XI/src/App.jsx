@@ -3,6 +3,7 @@ import "./App.css";
 import AvailablePlayers from "./component/Available/AvailablePlayers";
 import Navbar from "./component/Navbar/navbar";
 import Selected from "./component/Selected/Selected";
+import { ToastContainer } from 'react-toastify';
 
 // JSON fetch
 const playerFech = fetch("/players.json").then((res) => res.json());
@@ -46,6 +47,8 @@ function App() {
       ) : (
         <Selected playerPurches={playerPurches} remove={remove} />
       )}
+
+      <ToastContainer></ToastContainer>
     </>
   );
 }
